@@ -32,7 +32,7 @@ class DiscoveredDevicesView extends StatelessWidget {
             ),
             SizedBox(height: 30),
             Center(
-                child: RaisedButton(
+                child: ElevatedButton(
               child: Text("Add manually"),
               onPressed: () => showDialog(
                   context: context, builder: (context) => _AddManuallyDialog()),
@@ -160,10 +160,10 @@ class _AddManuallyDialogState extends State<_AddManuallyDialog> {
           ),
         ),
         actions: [
-          FlatButton(
+          TextButton(
               onPressed: () => Navigator.of(context).pop(),
               child: Text(Intl.message("Cancel"))),
-          FlatButton(
+          TextButton(
               onPressed: () {
                 if (_formKey.currentState!.validate()) {
                   Navigator.pushReplacementNamed(context, "/add-device",

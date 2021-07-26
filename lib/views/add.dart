@@ -234,7 +234,7 @@ class _DeviceNameDialogState extends State<_DeviceNameDialog> {
               ],
             )),
         actions: [
-          FlatButton(
+          TextButton(
             child: Text(Intl.message("Ok")),
             onPressed: () {
               if (_formKey.currentState!.validate()) {
